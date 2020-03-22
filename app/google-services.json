@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "871783536256",
+    "firebase_url": "https://bacnetcontroller.firebaseio.com",
+    "project_id": "bacnetcontroller",
+    "storage_bucket": "bacnetcontroller.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:871783536256:android:66affb5da9a5eac4b63865",
+        "android_client_info": {
+          "package_name": "com.example.bacnetcontroller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "871783536256-toobvtd2lbt5b3du5jpb83qassgo4dbv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJuhrZINF3eunCj3QK-B_Lg7sl2raboEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "871783536256-toobvtd2lbt5b3du5jpb83qassgo4dbv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
