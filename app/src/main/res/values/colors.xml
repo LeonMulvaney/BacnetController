@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#4169E1</color>
-    <color name="colorPrimaryDark">#2d499d</color>
+    <color name="colorPrimary">#010101</color>
+    <color name="colorPrimaryDark">#010101</color>
     <color name="colorAccent">	#e1b941</color>
     <color name ="White">#FFFFFF</color>
     <color name="darkred">#B22222</color>
     <color name="cylonBackground">#86C5DC</color>
     <color name="cylonFont">#010101</color>
+    <color name="buttonColor">#595959</color>
 </resources>

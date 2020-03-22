@@ -24,53 +24,109 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:src="@drawable/bacnet"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
                 </ImageView>
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:src="@drawable/lynskey"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
                 </ImageView>
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:src="@drawable/isma"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:layout_weight="1"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp">
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp">
                 </ImageView>
 
             </LinearLayout>
 
+
+
             <LinearLayout
-                android:layout_width="300dp"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
                 android:layout_marginBottom="30dp"
                 android:background="@color/cylonBackground">
 
                 <LinearLayout
                     android:layout_width="fill_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cylonFont"
                     android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/tvCurrentTime"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:text="18:29 PM"
+                            android:textAlignment="center"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/orbitron"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:textSize="12sp">
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/tvCurrentDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:textAlignment="center"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/orbitron"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:textSize="12sp">
+                        </TextView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -78,27 +134,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/orbitron"
-                            android:text="Device Bacnet ID"
-                            android:textAlignment="center"
-                            android:textColor="@color/cylonFont"
-                            android:textSize="14sp"
-                            android:layout_marginBottom="5dp"
-                            android:layout_marginTop="5dp"></TextView>
 
-                        <TextView
-                            android:id="@+id/tvBacnetId"
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/orbitron"
-                            android:textAlignment="center"
-                            android:textColor="@color/cylonFont"
-                            android:textSize="18sp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -112,12 +148,12 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
+                            android:layout_marginTop="25dp"
                             android:fontFamily="@font/orbitron"
                             android:text="22.5 °C"
                             android:textAlignment="center"
                             android:textColor="@color/cylonFont"
-                            android:textSize="22sp"
-                            android:layout_marginTop="25dp"></TextView>
+                            android:textSize="35sp"></TextView>
 
                         <TextView
                             android:layout_width="fill_parent"
@@ -134,8 +170,10 @@
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:layout_margin="15dp"
-                        android:background="@color/cylonFont">
+                        android:layout_margin="15dp">
+
+
+
                     </LinearLayout>
 
                 </LinearLayout>
@@ -143,34 +181,29 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:orientation="vertical">
+                        android:layout_margin="10dp">
 
-                        <TextView
+                        <Button
+                            android:id="@+id/btnLowerSp"
                             android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/orbitron"
-                            android:text="FCU STATUS"
+                            android:layout_height="40dp"
+                            android:text="-"
+                            android:textSize="25dp"
+                            android:textStyle="bold"
                             android:textAlignment="center"
-                            android:textColor="@color/cylonFont"
-                            android:textSize="10sp"
-                            android:layout_marginTop="25dp"></TextView>
+                            android:layout_gravity="center"
+                            android:textColor="@color/cylonBackground"
+                            android:background="@color/cylonFont"
+                            android:onClick="sendData">
+                        </Button>
 
-                        <TextView
-                            android:layout_width="fill_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:fontFamily="@font/orbitron"
-                            android:text="ON"
-                            android:textAlignment="center"
-                            android:textColor="@color/cylonFont"
-                            android:textSize="20sp"></TextView>
                     </LinearLayout>
 
                     <LinearLayout
@@ -206,8 +239,21 @@
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:layout_margin="15dp"
-                        android:background="@color/cylonFont">
+                        android:layout_margin="10dp">
+
+                        <Button
+                            android:id="@+id/btnHigherSp"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:text="+"
+                            android:textSize="30dp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_gravity="center"
+                            android:textColor="@color/cylonBackground"
+                            android:background="@color/cylonFont"
+                            android:onClick="sendData">
+                        </Button>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -216,13 +262,24 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="100dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imgOccupancyImage"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:src="@drawable/ic_man"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp">
+
+                        </ImageView>
 
                     </LinearLayout>
 
@@ -232,14 +289,52 @@
                         android:layout_weight="0.7"
                         android:orientation="vertical">
 
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/orbitron"
+                            android:text="FCU COMMAND"
+                            android:textAlignment="center"
+                            android:textColor="@color/cylonFont"
+                            android:textSize="12sp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginBottom="5dp"></TextView>
+
+                        <ToggleButton
+                            android:id="@+id/btnOnOff"
+                            android:layout_width="75dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/orbitron"
+                            android:textAlignment="center"
+                            android:textColor="@color/cylonBackground"
+                            android:textSize="15dp"
+                            android:textStyle="bold"
+                            android:background="@color/cylonFont"
+                            android:onClick="sendData"
+                            ></ToggleButton>
                     </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_weight="1"
-                        android:layout_margin="15dp"
-                        android:background="@color/cylonFont">
+                        android:layout_margin="15dp">
+
+                        <TextView
+                            android:id="@+id/tvFanSpeed"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/orbitron"
+                            android:textColor="@color/cylonFont"
+                            android:textAlignment="center"
+                            android:textSize="30sp"
+                            android:text="3"
+                            android:layout_marginTop="25dp"
+                            android:onClick="changeFanSpeed">
+                        </TextView>
 
                     </LinearLayout>
                 </LinearLayout>
@@ -247,23 +342,8 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="1"
-                        android:orientation="vertical">
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="fill_parent"
-                        android:layout_height="fill_parent"
-                        android:layout_weight="0.7"
-                        android:orientation="vertical">
-
-                    </LinearLayout>
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -273,55 +353,69 @@
 
                         <TextView
                             android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/orbitron"
+                            android:text="FCU Bacnet ID:"
+                            android:textAlignment="center"
+                            android:textColor="@color/cylonFont"
+                            android:textSize="14sp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvBacnetId"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/orbitron"
+                            android:textColor="@color/cylonFont"
+                            android:textAlignment="center"
+                            android:textSize="18sp"
+                            android:text="1500"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="15dp">
+                            </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:onClick="changeFanSpeed">
+
+                        <TextView
+                            android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:text="FAN SPEED"
                             android:textColor="@color/cylonFont"
                             android:fontFamily="@font/orbitron"
                             android:textAlignment="center"
                             android:layout_marginBottom="10dp"
-                            >
-
+>
                         </TextView>
 
                     </LinearLayout>
                 </LinearLayout>
 
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:background="@color/cylonFont"></View>
+
             </LinearLayout>
 
 
-            <!-- Old Stuff -->
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Change Setpoint:"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:layout_marginTop="30dp" android:textColor="@color/colorPrimaryDark"
-                android:textStyle="bold">
-            </TextView>
-
-            <EditText
-                android:id="@+id/etNewSetpoint"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:layout_gravity="center"
-                android:focusable="true"
-                ></EditText>
-
-
-            <Button
-                android:id="@+id/btnUpdateSetpoint"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="15dp"
-                android:text="Change Setpoint"
-                android:layout_gravity="center"
-                android:textAlignment="center"
-                android:background="@color/cylonBackground"
-                android:textColor="@color/cylonFont"
-                android:onClick="changeSetpoint">
-            </Button>
 
 
             <!-- Old Layout with Two Columns
