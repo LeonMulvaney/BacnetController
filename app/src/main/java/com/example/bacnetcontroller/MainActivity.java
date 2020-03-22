@@ -117,11 +117,11 @@ public class MainActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     // The toggle is enabled
-                    value4 = "True";
+                    value4 = "1";
 
                 } else {
                     // The toggle is disabled
-                    value4 = "False";
+                    value4 = "0";
 
                 }
             }
@@ -165,14 +165,19 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
                      value1 = ds.child("roomSetpoint").getValue().toString();
                      value2 = ds.child("roomTemp").getValue().toString();
-                     value3 = ds.child("deviceBacnetId").getValue().toString();
+
+                     String idAsString = ds.child("deviceBacnetId").getValue().toString();
+                     Double id = Double.parseDouble(idAsString);
+                     int idInt = id.intValue();
+                     value3 = Integer.toString(idInt);
+
                      value4 = ds.child("onOffCommand").getValue().toString();
                      value5 = ds.child("fanSpeed").getValue().toString();
 
                     tvCurrentSetpoint.setText(value1 + " °C");
                     tvroomTemp.setText(value2 + " °C");
                     tvBacnetId.setText(value3);
-                    if(value4.equals("True")){
+                    if(value4.equals("1")){
                         toggle.setChecked(true);
                         imgOccupancyImage.setVisibility(View.VISIBLE);
                     }
@@ -208,7 +213,6 @@ public class MainActivity extends AppCompatActivity {
 
         databaseReference.child("values").setValue(firebaseMap);
 
-        Toast.makeText(getApplicationContext(),"Data Sent",Toast.LENGTH_SHORT).show();
     }
 
     //Duplicated so does not need a View Object to run
@@ -226,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
         databaseReference.child("values").setValue(firebaseMap);
 
-        Toast.makeText(getApplicationContext(),"Data Sent",Toast.LENGTH_SHORT).show();
+
     }
 
     public void decreaseSetpoint(){
